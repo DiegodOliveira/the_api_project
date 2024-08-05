@@ -12,29 +12,29 @@ public class SimpleMath {
 	
 	public Double sum(Double numberOne, Double numberTwo	) {
 		
-		return (numberOne) + (numberTwo);
+		return numberOne + numberTwo;
 	}
 	
 	
 	public Double times(Double numberOne, Double numberTwo	) {
-		return (numberOne) * (numberTwo);
+		return numberOne * numberTwo;
 	}
 	
 	
 	public Double minus(Double numberOne, Double numberTwo	) {
 		
-		return (numberOne) - (numberTwo);
+		return numberOne - numberTwo;
 	}
 	
 	
 	public Double divided(Double numberOne, Double numberTwo	) {
 		
-		return (numberOne) / (numberTwo);
+		return numberOne / numberTwo;
 	}
 	
 	
 	public Double square( Double number) {
 		
-		return Math.sqrt((number));
+		return Math.sqrt(number);
 		}
 }
