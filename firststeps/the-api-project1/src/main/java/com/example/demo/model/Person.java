@@ -14,11 +14,11 @@ import jakarta.persistence.Table;
 @Table(name = "person")
 public class Person implements Serializable{
 	
-	private static final long serialVersionUID = 1L;
+	private static final Long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	
 	@Column(name = "first_name", nullable = false, length = 80)
 	private String firstName;
@@ -29,16 +29,16 @@ public class Person implements Serializable{
 	@Column(nullable = false, length = 80)
 	private String address;
 	
-	@Column(nullable = false, length = 6)
+	@Column(nullable = false, length = 10)
 	private String gender;
 	
 	public Person() {}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -74,7 +74,7 @@ public class Person implements Serializable{
 		this.gender = gender;
 	}
 
-	public static long getSerialversionuid() {
+	public static Long getSerialversionuid() {
 		return serialVersionUID;
 	}
 

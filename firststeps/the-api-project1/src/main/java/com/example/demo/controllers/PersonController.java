@@ -56,13 +56,13 @@ public class PersonController {
 			method= RequestMethod.PUT,
 			consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person update(@RequestBody Person person ){
+	public Person update(@RequestBody Person person ){ 
 		return service.update(person);	
 	}
 	
 	@RequestMapping(
-			method= RequestMethod.DELETE)
-	public 	void delete(@PathVariable(value = "id") Long id){
+			value = "/{id}",method= RequestMethod.DELETE)
+	public 	void delete(@PathVariable Long id){
 		service.delete(id);	
 	}
 	
