@@ -20,6 +20,7 @@ import com.example.demo.Services.PersonService;
 //import com.example.demo.exceptions.UnsupportedMathOperationExcepetion;
 //import com.example.demo.math.SimpleMath;
 import com.example.demo.vo.v1.PersonVO;
+import com.example.demo.vo.v2.PersonVOV2;
 
 
 
@@ -50,6 +51,13 @@ public class PersonController {
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public PersonVO create(@RequestBody PersonVO person ){
 			return service.create(person);	
+	}
+	
+	@PostMapping(value = "/v2",
+			consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public PersonVOV2 createV2(@RequestBody PersonVOV2 person ){
+		return service.createV2(person);	
 	}
 	
 	@PutMapping(
