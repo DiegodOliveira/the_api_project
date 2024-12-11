@@ -46,6 +46,19 @@
 			<scope>runtime</scope>
 		</dependency>
 		
+		<!--
+		<dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>8.5.0</version> 
+    </dependency> -->
+
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.3.1</version> <!-- Certifique-se de usar a versão adequada do driver JDBC -->
+    </dependency>
+		
 		<!-- Dependência Dozermap -->
 		<dependency>
     		<groupId>com.github.dozermapper</groupId>
