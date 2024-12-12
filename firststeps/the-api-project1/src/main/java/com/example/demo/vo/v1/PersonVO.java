@@ -3,6 +3,10 @@ package com.example.demo.vo.v1;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,6 +16,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "person")
+@JsonPropertyOrder({"id","first_name", "last_name","address","gender"})
 public class PersonVO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -20,15 +25,19 @@ public class PersonVO implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	
+	@JsonProperty("first_name")
 	@Column(name = "first_name", nullable = false, length = 80)
 	private String firstName;
 	
+	@JsonProperty("last_name")
 	@Column(name = "last_name", nullable = false, length = 80)
 	private String lastName;
 	
-	@Column(nullable = false, length = 80)
+	@Column(nullable = false, length = 80)  
 	private String address;
 	
+	@JsonIgnore
 	@Column(nullable = false, length = 20)
 	private String gender;
 	
